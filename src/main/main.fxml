@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1193.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.mainController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="150.4" minHeight="0.0" prefHeight="110.4" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="640.8" minHeight="10.0" prefHeight="590.2" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="141.79999999999995" minHeight="0.0" prefHeight="55.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <StackPane prefHeight="156.0" prefWidth="598.0">
+         <children>
+            <Label text="All Players">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="106.0" prefWidth="450.0" GridPane.columnIndex="1">
+         <children>
+            <Label text="Few Players">
+               <font>
+                  <Font name="Times New Roman Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="allTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="allJerseyCol" prefWidth="150.0" text="Jersey #" />
+                <TableColumn fx:id="allNameCol" prefWidth="150.0" text="Name" />
+                  <TableColumn fx:id="allPointsCol" prefWidth="150.0" text="Points" />
+                  <TableColumn fx:id="allTeamCol" prefWidth="150.0" text="Team" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="fewTable" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="fewJerseyCol" prefWidth="150.0" text="Jersey #" />
+                <TableColumn fx:id="fewNameCol" prefWidth="150.0" text="Name" />
+                  <TableColumn fx:id="fewPointsCol" prefWidth="150.0" text="Points" />
+                  <TableColumn fx:id="fewTeamCol" prefWidth="150.0" text="Team" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="addB" mnemonicParsing="false" onAction="#onAddB" text="&gt;&gt;&gt;" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="removeB" mnemonicParsing="false" onAction="#onRemoveB" text="&lt;&lt;&lt;" />
+         </children>
+      </StackPane>
+   </children>
+</GridPane>
